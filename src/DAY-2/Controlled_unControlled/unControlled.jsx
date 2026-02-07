@@ -1,6 +1,6 @@
 import { useRef } from "react";
 
-function uncontrolled() {
+function Uncontrolled() {
   const inputRef = useRef();
 
   const handleSubmit = () => {
@@ -35,4 +35,4 @@ function uncontrolled() {
     </div>
   );
 }
-export default uncontrolled;
+export default Uncontrolled;

@@ -1,5 +1,5 @@
-import ControlledComp from "./controlled";
-import Uncontrolled from "./unControlled";
+import ControlledComp from "./Controlled_unControlled/controlled";
+import Uncontrolled from "./Controlled_unControlled/unControlled";
 
 function Day2() {
   return (
