@@ -16,7 +16,9 @@ function Focus(){
         inputRef.current.focus();
     },[]);
 
-    const addItem=()=>{
+    const addItem=(e)=>{
+        e.preventDefault();
+
         const value=inputRef.current.value.trim();
         if(!value) return ;
 
@@ -27,7 +29,8 @@ function Focus(){
 
     }
 
-    const handleSearch=()=>{
+    const handleSearch=(e)=>{
+      e.preventDefault();
         setSearchTerm(searchReef.current.value)
     };
 
@@ -40,16 +43,16 @@ function Focus(){
     <div className="container">
         <h1>Focus input element</h1>
 
-         <div className="section">
+         <form className="section" onSubmit={addItem}>
         <input
           ref={inputRef}
           placeholder="Add new item..."
         />
         <button onClick={addItem}>Add</button>
-      </div>
+      </form>
 
       {/* Search Section */}
-      <div className="section">
+      <form className="section"  onSubmit={addItem}>
         <input
           ref={searchReef}
           placeholder="Search items..."
@@ -57,7 +60,7 @@ function Focus(){
         <button onClick={handleSearch}>Search</button>
 
 
-      </div>
+      </form>
       
       {/* List Section */}
       <ul>
