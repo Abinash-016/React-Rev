@@ -6,6 +6,7 @@ import Day4 from "./DAY-4/App";
 import Day5 from "./DAY-5/App";
 import { AuthProvider } from "./DAY-8/AuthContext";
 import Day8 from "./DAY-8/App";
+import Day9 from "./DAY-9/react-jest-practice/components/UserCard";
 
 function App() {
   return (
@@ -16,11 +17,12 @@ function App() {
       {/* <Day4/> */}
       {/* <Day5/> */}
 
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <AuthProvider>
           <Day8 />
         </AuthProvider>
-      </BrowserRouter>
+      </BrowserRouter> */}
+        <Day9 name="Abinash" initialAge={24} />
     </div>
   );
 }
